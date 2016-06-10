@@ -58,10 +58,17 @@ class website(orm.Model):
         page_name = slugify(name, max_length=50)
         page_xmlid = "%s.%s" % (template_module, page_name)
 
+        domain = [
+            ('website_id', '=', context.get('website_id')),
+            ('key', '=', page_xmlid),
+        ]
+        view_id = view.search(cr, uid, domain, context=context)
+
         try:
             # existing page
-            imd.get_object_reference(cr, uid, template_module, page_name)
-        except ValueError:
+            # imd.get_object_reference(cr, uid, template_module, page_name)
+            assert view_id
+        except:
             # new page
             _, template_id = imd.get_object_reference(cr, uid, template_module, template_name)
 
