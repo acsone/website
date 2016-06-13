@@ -66,8 +66,8 @@ class website(orm.Model):
 
         try:
             # existing page
-            # imd.get_object_reference(cr, uid, template_module, page_name)
-            assert view_id
+            if not view_id:
+                imd.get_object_reference(cr, uid, template_module, page_name)
         except:
             # new page
             _, template_id = imd.get_object_reference(cr, uid, template_module, template_name)

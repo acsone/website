@@ -21,26 +21,32 @@ class view(osv.osv):
     )]
 
     def _view_obj(self, cr, uid, view_id, context=None):
-        if isinstance(view_id, basestring):
-            try:
-                return self.pool['ir.model.data'].xmlid_to_object(
-                    cr, uid, view_id, raise_if_not_found=True, context=context
-                )
-            except:
-                # Try to fallback on key instead of xml_id
-                if self.search(cr, uid, [('key', '=', view_id),('website_id','=',context.get('website_id', False))], context=context):
-                    rec_id = self.search(cr, uid, [('key', '=', view_id),('website_id','=',context.get('website_id', False))], context=context)
+        """
+        First check based on key website_id
+        If no record found then search on xml_id just as native code
+        """
+        if context.get('website_id'):
+            if isinstance(view_id, basestring):
+                rec_ids = self.search(
+                    cr, uid, [('key', '=', view_id),
+                              ('website_id', '=',
+                               context.get('website_id', False))],
+                    context=context)
+                if not rec_ids:
+                    rec_ids = self.search(
+                        cr, uid, [('key', '=', view_id)], context=context)
+                if not rec_ids:
+                    return super(view, self)._view_obj(
+                        cr, uid, view_id, context=context)
                 else:
-                    rec_id = self.search(cr, uid, [('key', '=', view_id)], context=context)
-                if rec_id:
-                    return self.browse(cr, uid, rec_id, context=context)[0]
-                else:
-                    raise
-        elif isinstance(view_id, (int, long)):
-            return self.browse(cr, uid, view_id, context=context)
-
-        # assume it's already a view object (WTF?)
-        return view_id
+                    return self.browse(cr, uid, rec_ids, context=context)[0]
+            elif isinstance(view_id, (int, long)):
+                return self.browse(cr, uid, view_id, context=context)
+            else:
+                return view_id
+        else:
+            return super(view, self)._view_obj(
+                cr, uid, view_id, context=context)
 
     @tools.ormcache_context(accepted_keys=('website_id',))
     def get_view_id(self, cr, uid, xml_id, context=None):
