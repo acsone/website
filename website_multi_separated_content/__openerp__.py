@@ -2,8 +2,7 @@
 # Copyright 2016 ACSONE SA/NV (<http://acsone.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
-    'name': "Content Multi Website",
-
+    'name': "Website Multi Separated Content",
     'summary': """
         This module provides base content to be inherited by other modules
         that want to allow to manage specific content by website""",

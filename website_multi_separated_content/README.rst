@@ -2,9 +2,9 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-=====================
-Content Multi Website
-=====================
+===============================
+Website Multi Separated Content
+===============================
 
 This module provides base content to be inherited by other modules
 that want to allow to manage specific content by website.
