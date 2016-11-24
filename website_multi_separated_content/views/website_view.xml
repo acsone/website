@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+        <record id="website_view" model="ir.ui.view">
+            <field name="name">website.view.form (website_multi_separated_content)</field>
+            <field name="model">website</field>
+            <field name="inherit_id" ref="website.view_website_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="public_name"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
