@@ -3,7 +3,7 @@
     'category': 'Website',
     'summary': 'Build Multiple Websites',
     'website': 'https://www.odoo.com',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'description': """
 OpenERP Multi Website
 =====================
