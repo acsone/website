@@ -13,11 +13,18 @@ Includes modules that expand official website modules and include:
 * and more...
 
 [//]: # (addons)
+
 Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
+[website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
+[website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
+[website_no_crawler](website_no_crawler/) | 10.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
 [website_snippet_data_slider](website_snippet_data_slider/) | 10.0.1.0.0 | Abstract data slider for use on website. Primary use (and default implementation) is product slider.
+
 
 Unported addons
 ---------------
@@ -31,22 +38,16 @@ addon | version | summary
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 (unported) | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.1.0.0 (unported) | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 (unported) | Website CRM privacy policy
-[website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 (unported) | Provides a ReCaptcha validation in Website Contact Form
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
-[website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 (unported) | Provides an autocomplete field for Website on any model
-[website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 (unported) | Provides a ReCaptcha field for Website Forms
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 (unported) | Block phrases entered in forum posts and comments.
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 (unported) | Website Legal Page
 [website_logo](website_logo/) | 8.0.1.0.0 (unported) | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
-[website_no_crawler](website_no_crawler/) | 9.0.1.0.0 (unported) | Disables robots.txt for indexing by webcrawlers like Google
-[website_payment_v10](website_payment_v10/) | 9.0.1.0.0 (unported) | Payment: Website Integration
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 (unported) | Allows logged in portal users to manage their contacts
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 (unported) | Add purchase orders and quotation in the frontend portal
-[website_portal_v10](website_portal_v10/) | 9.0.1.0.0 (unported) | Account Management Frontend for your Customers
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 (unported) | VAT number required in checkout form
