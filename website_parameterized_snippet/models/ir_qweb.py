@@ -8,7 +8,7 @@ from lxml import etree
 
 
 class HTML(models.AbstractModel):
-    _inherit = 'website.qweb.field.html'
+    _inherit = 'ir.qweb.field.html'
 
     def to_html(self, cr, uid, field_name, record, options,
                 source_element, t_att, g_att, qweb_context, context=None):
