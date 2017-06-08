@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="assets_editor" inherit_id="website.assets_editor" name="website_dynamic_snippet Editor assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_dynamic_snippet/static/src/js/website_dynamic_snippet.editor.js"></script>
+        </xpath>
+    </template>
+
+    <template id="webiste_dynamic_finder_instance_widget" inherit_id="website.snippets" name="Show Finder Filter Options">
+         <xpath expr="//div[@id='snippet_options']" position="inside">
+             <div data-snippet-option-id="website_dynamic_finder_related_snippet" data-selector=".website_dynamic_finder_related_entry"
+                 data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel, .oe_share"
+                 data-selector-children=".content" data-js="website_dynamic_finder_related_snippet">
+                 <li>
+                     <a href="#" class="button js_website_dynamic_finder_related_settings">Change filter</a>
+                 </li>
+             </div>
+         </xpath>
+    </template>
+</odoo>
