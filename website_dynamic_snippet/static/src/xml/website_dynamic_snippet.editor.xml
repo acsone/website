@@ -1,0 +1,48 @@
+<templates id="template" xml:space="preserve">
+    <t t-name="web_editor.dialog.editor_dialog_website_dynamic_finder_related_settings">
+        <form>
+            <div class="form-horizontal website-dynamic-finder-related-settings">
+                <div class="form-group">
+                    <label for="title-snippet" class="col-sm-3 control-label">
+                        Title
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="title-snippet"/>
+                    </div>
+                </div>
+                <div class="form-group favorite">
+                    <label for="favorite" class="col-sm-3 control-label">
+                        Show favorites only
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="checkbox" id="favorite" class="favorite"/>
+                    </div>
+                </div>
+                <div class="form-group  mb0">
+                    <label for="limit" class="col-sm-3 control-label">
+                        Number of items
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="limit" />
+                    </div>
+                </div>
+                <div class="form-group  mb0">
+                    <label for="empty-list-message" class="col-sm-3 control-label">
+                        Empty List message
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="empty-list-message" placeholder="If blank, the section is hidden if no items fit the given criteria."/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="all-links" class="col-sm-3 control-label">
+                        Access All Links
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="all-links"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </t>
+</templates>
