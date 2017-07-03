@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<!-- Copyright 2013-2017 Savoir-faire Linux (<http://www.savoirfairelinux.com>)
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
     <data>
         <template id="website_display_menu" name="Conditional display menu"
                   inherit_id="website.layout"
@@ -9,7 +11,6 @@
                     <t t-call="website.submenu"/>
                 </t>
             </xpath>
-
         </template>
     </data>
-</openerp>
+</odoo>
