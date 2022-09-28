@@ -12,16 +12,17 @@ Configuration
 To implement your dynamic snippet you have to:
 
 * Add a dependency into your custom module from "website_dynamic_snippet" and the module that adds the model you want
-to show into the website. Here we can take "event" for exemple.
+  to show into the website. Here we can take "event" for exemple.
 * You have to create your snippet as all other snippet. Into the tag "<section>" you have to add those properties too:
-** class="website_dynamic_finder_related_entry oe_snippet_body"
-** data-model-name='blog.post'
-** data-template-id='website_blog_dynamic_snippet.blog_post_snippet_list'> with the last one taht is the template that will be dynamiccaly called 
+      * class="website_dynamic_finder_related_entry oe_snippet_body"
+      * data-model-name='blog.post'
+      * data-template-id='website_blog_dynamic_snippet.blog_post_snippet_list'> with the last one taht is the template that will be dynamiccaly called
 * Once the templating is over you have to make an inherit from the backend's model to 'website.dynamic.snippet' that is define here as an Abstract model
-     _name = "event.event"
-     _inherit = ['event.event', 'website.dynamic.finder']
-** If you want to extend the behavior of the research you can also overwrite the defined method "get_datas" or "get_domain". By default it also add a is_favorite field used
-to create a priority onto the dynamic content shown into the frontend.
+    _name = "event.event"
+    _inherit = ['event.event', 'website.dynamic.finder']
+
+    * If you want to extend the behavior of the research you can also overwrite the defined method "get_datas" or "get_domain". By default it also add a is_favorite field used
+      to create a priority onto the dynamic content shown into the frontend.
 
 Bug Tracker
 ===========

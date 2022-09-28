@@ -1,15 +1,14 @@
-# -*- coding: utf-8 -*-
 # © 2015-2017 ACSONE SA/NV (<http://acsone.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from odoo import api, fields, models
 
 
 class WebsiteDynamicFinder(models.AbstractModel):
-    _name = 'website.dynamic.finder'
+    _name = "website.dynamic.finder"
 
     _max_items = 20
 
-    is_favorite = fields.Boolean('Website Favorite')
+    is_favorite = fields.Boolean("Website Favorite")
 
     def _get_domain(self, is_favorite=None, **kwargs):
         """
@@ -20,7 +19,7 @@ class WebsiteDynamicFinder(models.AbstractModel):
         """
         domain = []
         if is_favorite:
-            domain = [('is_favorite','=', is_favorite)]
+            domain = [("is_favorite", "=", is_favorite)]
         return domain
 
     @api.model
